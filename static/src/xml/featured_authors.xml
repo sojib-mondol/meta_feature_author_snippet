@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates xml:space="preserve">
+    <t t-name="meta_feature_author.meta_feature_author_authors_layout">
+        <div class="owl_slider_wrapper owl-carousel owl-theme">
+            <t t-foreach="featured_authors" t-as="author" t-key="author['id']">
+                <div class="item">
+                    <div class="card">
+                        <a t-att-href="author.author_url" class="text-center card_link">
+                            <t t-if="author.imageUrl">
+                                <img t-att-src="author.imageUrl" class="lazyload card-img-top" t-att-alt="author.name" />
+                            </t>
+                            <t t-else="">
+                                <img t-att-src="'/meta_feature_author/static/src/img/avater-image.png'" class="lazyload card-img-top" alt="Default Avatar" />
+                            </t>
+                            <div class="card-body">
+                                <p><t t-out="author.name"/></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </t>
+        </div>
+    </t>
+</templates>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="meta_featured_authors" name="Featured Authors">
+        <section class="meta_featured_authors pt32 pb32">
+            <div class="container">
+                <h3 class="meta_section_title"> Featured Authors </h3>
+                <div class="featured_author_render"></div>
+            </div>
+        </section>
+    </template>
+
+    <template id="meta_featured_author_snippet" inherit_id="website.snippets" name="Featured Authors">
+        <xpath expr="//div[@id='snippet_structure']" position="before">
+            <div id="snippet_structure" class="o_panel">
+                <div class="o_panel_header">Meta Snippets</div>
+                <div class="o_panel_body">
+                    <t t-snippet="meta_feature_author.meta_featured_authors" t-thumbnail="/meta_feature_author/static/src/img/features-authors.svg">
+                        <keywords>featured, author</keywords>
+                    </t>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+</odoo>

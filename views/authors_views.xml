@@ -1,0 +1,14 @@
+<odoo>
+    <record id="view_author_form_inherit" model="ir.ui.view">
+        <field name="name">product.author.form.inherit</field>
+        <field name="model">product.author</field>
+        <field name="inherit_id" ref="meta_book_info.product_author_form"/> 
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('oe_title')]" position="before">
+                <group>
+                    <field name="feature"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
